@@ -5,35 +5,104 @@ body {
   width: 100%;
   margin: 0;
   scroll-behavior: smooth;
+  text-align: center;
+}
+
+html ::-webkit-scrollbar,
+body ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+html ::-webkit-scrollbar-track,
+body ::-webkit-scrollbar-track {
+  background-color: #ececec;
+  border-radius: 10px;
+}
+
+html ::-webkit-scrollbar-thumb,
+body ::-webkit-scrollbar-thumb {
+  background: #63AFFF;
+  border-radius: 10px;
+  width: 5px;
+  height: 3px;
+}
+
+html ::-webkit-scrollbar-thumb:hover,
+body ::-webkit-scrollbar-thumb:hover {
+  background: #1989FF;
+}
+
+html ::-webkit-scrollbar-button,
+body ::-webkit-scrollbar-button {
+  background-color: transparent;
+  width: 4em;
 }
 
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button:focus,
+select:focus,
+input:focus,
+input:hover[type=number]::-webkit-inner-spin-button,
+input:focus,
+input:hover[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
+  outline: none;
+  outline: none;
 }
 
 .pgHead {
   display: inline-block;
   width: 100%;
-  padding: 15px 3em;
-  border: 1px solid;
+  padding: 1.5em 3em;
 }
 
-.pgHead ul {
+.pgHead ul, .article ul {
   display: inline-block;
   width: 100%;
-  list-style: none;
-  margin: 0;
-  padding: 0;
   text-align: center;
+}
+
+.pgHead ul li, .article ul li {
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+.pgHead ul .middle, .article ul .middle {
+  display: inline-block;
+  margin: auto;
+  width: auto;
+}
+
+.pgHead ul .right, .article ul .right {
+  color: black;
+  float: right;
 }
 
 .pgHead ul li {
   height: 40px;
   padding: 10px 15px;
   color: #848484;
-  font-family: sans-serif;
-  font-size: 15px;
   font-weight: 600;
 }
 
@@ -43,25 +112,159 @@ body {
 }
 
 .pgHead ul .logo {
-  background-color: red;
-  width: 40px;
+  width: 100px;
   float: left;
-  border-radius: 100%;
-}
-
-.pgHead ul .middle {
-  display: inline-block;
-  margin: auto;
-  width: auto;
-}
-
-.pgHead ul .right {
-  color: black;
-  float: right;
+  background-image: url("../logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .pgHead ul .def {
   border-radius: 10px;
   background-color: #ececec;
+}
+
+.article {
+  padding: 1.5em 3em;
+  padding-top: 4em;
+}
+
+.article ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.article ul li {
+  text-align: left;
+}
+
+.article ul .left {
+  width: auto;
+  float: left;
+}
+
+.article ul .left p {
+  margin-bottom: 1em;
+  font-size: 15px;
+  font-weight: 600;
+  color: #848484;
+}
+
+.article ul .left h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.article ul .middle {
+  height: 100%;
+  line-height: 1.6em;
+  padding: 0px 1.5em;
+  border-left: 1px solid #ececec;
+  color: #848484;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.article ul .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+}
+
+.article ul .right button {
+  border: 1px solid transparent;
+  height: 35px;
+  width: 35px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 100%;
+}
+
+.article ul .right button i {
+  margin: auto;
+}
+
+.article ul .right .next {
+  width: 50px;
+  height: 50px;
+  margin: auto 15px;
+  border-color: #ececec;
+  background-color: #1989FF;
+  color: #ececec;
+}
+
+.card {
+  display: inline-block;
+  width: 100%;
+  padding: 2em 0em;
+}
+
+.card ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.card ::-webkit-scrollbar-track {
+  background-color: #ececec;
+  border-radius: 10px;
+}
+
+.card ::-webkit-scrollbar-thumb {
+  background: #63AFFF;
+  border-radius: 10px;
+  width: 5px;
+  height: 3px;
+}
+
+.card ::-webkit-scrollbar-thumb:hover {
+  background: #1989FF;
+}
+
+.card ::-webkit-scrollbar-button {
+  background-color: transparent;
+  width: 4em;
+}
+
+.card ul {
+  width: 99.5%;
+  overflow: auto;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.card ul li {
+  display: inline-block;
+  margin: 0px 1em;
+  margin-bottom: 1.5em;
+}
+
+.card ul li img {
+  vertical-align: middle;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.btn {
+  border: 1px solid transparent;
+  height: 35px;
+  width: 35px;
+  margin: auto;
+  width: auto;
+  height: auto;
+  padding: 10px 15px;
+  display: inline-block;
+  margin: auto;
+  border-radius: 5px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.btn:hover {
+  color: #ececec;
+  background-color: #1989FF;
 }
 /*# sourceMappingURL=style.css.map */

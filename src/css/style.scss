@@ -4,52 +4,140 @@
     display: inline-block;
     width: 100%;
 }
-$color : ('col-1':red,'col-2':black,'col-3':#ececec,'col-4':#848484);
+$pad :1.5em 3em;
 .pgHead {
     @include mid1;
-    padding: 15px 3em;
-    border: 1px solid;
+    padding:$pad;
 }
-
+.pgHead,.article {
+    ul{
+        @include mid1;
+        text-align: center;
+        li{
+            font : {
+                family : sans-serif;
+                size: 15px;
+            }
+        }
+    .middle{
+            display: inline-block;
+            margin: auto;
+            width: auto;
+        }
+    .right{
+            color: map-get($color,'col-2');
+            float: right;
+        }
+    }
+}
 .pgHead {
     ul {
-        @include mid1;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        text-align: center;
         li{
             height: 40px;
             padding:10px 15px;
             color: map-get($color,'col-4');
-            font : {
-                family : sans-serif;
-                size: 15px;
-                weight:600;
-            }
+            font : {weight:600;}
         }
         .act{
             color: map-get($color,'col-2');
             border-bottom:2px solid map-get($color,'col-2');
         }
         .logo {
-            background-color: red;
-            width: 40px;
+            width:100px;
             float: left;
-            border-radius:100%;
-        }
-        .middle{
-            display: inline-block;
-            margin: auto;
-            width: auto;
-        }
-        .right{
-            color: map-get($color,'col-2');
-            float: right;
+            background : {
+                image : url('../logo.svg');
+                repeat: no-repeat;
+                size : contain;
+            }
         }
         .def{
             border-radius:10px;
             background-color: map-get($color,'col-3');
         }
     }
+}
+// article design
+.article{
+    padding:$pad;
+    padding-top:4em;
+}
+.article{
+    ul{
+        display: flex;
+        li{
+            text-align: left;
+        }
+        .left{
+            width: auto;
+            float: left;
+            p{
+                margin-bottom:1em;
+                font : {
+                    size:15px;
+                    weight:600;
+                }
+                color:map-get($color,'col-4');
+            }
+            h1{
+                font-size: 2.5em;
+                font-weight: 700;
+            }
+        }
+        .middle{
+            height: 100%;
+            line-height: 1.6em;
+            padding:0px 1.5em;
+            border-left: 1px solid map-get($color,'col-3');
+            color:map-get($color,'col-4');
+            font-size: 13px;
+            text-transform: capitalize;
+        }
+        .right{
+            display: flex;
+            padding: 5px;
+            button{
+                @include icon;
+                @include ic-google;
+                border-radius:100%;
+            }
+            .next{
+                width: 50px;
+                height: 50px;
+                margin:auto 15px;
+                border-color:map-get($color,'col-3');
+                background-color:map-get($color,'col-5');
+                color:map-get($color,'col-3');
+            }
+        }
+    }
+}
+//card box
+.card{
+    @include mid1;
+    @include scr-bar;
+    padding:2em 0em;
+    ul{
+        width: 99.5%;
+        overflow: auto;
+        white-space: nowrap;
+        text-align: center;
+        li{
+            display: inline-block;
+            margin:0px 1em;
+            margin-bottom: 1.5em;
+            img{
+                vertical-align: middle;
+                height: 100%;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+.btn{
+    @include btn;
+}
+.btn:hover{
+    color: map-get($color,"col-3");
+    background-color: map-get($color,"col-5");
 }
