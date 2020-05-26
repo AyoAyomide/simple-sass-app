@@ -22,7 +22,7 @@ body ::-webkit-scrollbar-track {
 
 html ::-webkit-scrollbar-thumb,
 body ::-webkit-scrollbar-thumb {
-  background: #63AFFF;
+  background: #DE9990;
   border-radius: 10px;
   width: 5px;
   height: 3px;
@@ -30,7 +30,7 @@ body ::-webkit-scrollbar-thumb {
 
 html ::-webkit-scrollbar-thumb:hover,
 body ::-webkit-scrollbar-thumb:hover {
-  background: #1989FF;
+  background: #FFB3A9;
 }
 
 html ::-webkit-scrollbar-button,
@@ -193,7 +193,7 @@ input:hover[type=number]::-webkit-outer-spin-button {
   height: 50px;
   margin: auto 15px;
   border-color: #ececec;
-  background-color: #1989FF;
+  background-color: #FFB3A9;
   color: #ececec;
 }
 
@@ -214,14 +214,14 @@ input:hover[type=number]::-webkit-outer-spin-button {
 }
 
 .card ::-webkit-scrollbar-thumb {
-  background: #63AFFF;
+  background: #DE9990;
   border-radius: 10px;
   width: 5px;
   height: 3px;
 }
 
 .card ::-webkit-scrollbar-thumb:hover {
-  background: #1989FF;
+  background: #FFB3A9;
 }
 
 .card ::-webkit-scrollbar-button {
@@ -265,6 +265,37 @@ input:hover[type=number]::-webkit-outer-spin-button {
 
 .btn:hover {
   color: #ececec;
-  background-color: #1989FF;
+  background-color: #FFB3A9;
+}
+
+@media screen and (max-width: 43.5em) {
+  .pgHead, .article {
+    padding: 1em;
+    padding-top: 1em;
+  }
+  .pgHead ul .middle {
+    display: none;
+  }
+  .article ul {
+    display: inline-block;
+  }
+  .article ul .left {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+  .article ul .middle {
+    padding: 2em;
+    width: 100%;
+    text-align: center;
+  }
+  .article ul .right {
+    display: inline-block;
+    float: none;
+    width: 10em;
+  }
+  .article ul .right button {
+    display: inline-block;
+  }
 }
 /*# sourceMappingURL=style.css.map */

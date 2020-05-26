@@ -141,3 +141,41 @@ $pad :1.5em 3em;
     color: map-get($color,"col-3");
     background-color: map-get($color,"col-5");
 }
+// @media screen and (max-width:40em){
+    @media screen and (max-width:43.5em){
+        $pad : 1em;
+        .pgHead,.article{
+            padding: $pad;
+            padding-top: $pad;
+        }
+        .pgHead{
+            ul {
+               .middle{
+                    display: none;
+                }
+            }
+        }
+        .article{
+            ul{
+                display: inline-block;
+            .left {
+                    width: 100%;
+                    float: none;
+                    text-align: center;
+            }
+            .middle{
+                padding:2em;
+                width: 100%;
+                text-align: center;
+            }
+            .right{
+                display: inline-block;
+                float: none;
+                width:10em;
+                button {
+                    display: inline-block;
+                }
+            }
+            }
+        }
+}
