@@ -1,0 +1,55 @@
+@import "root";
+@include default;
+@mixin mid1 {
+    display: inline-block;
+    width: 100%;
+}
+$color : ('col-1':red,'col-2':black,'col-3':#ececec,'col-4':#848484);
+.pgHead {
+    @include mid1;
+    padding: 15px 3em;
+    border: 1px solid;
+}
+
+.pgHead {
+    ul {
+        @include mid1;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        li{
+            height: 40px;
+            padding:10px 15px;
+            color: map-get($color,'col-4');
+            font : {
+                family : sans-serif;
+                size: 15px;
+                weight:600;
+            }
+        }
+        .act{
+            color: map-get($color,'col-2');
+            border-bottom:2px solid map-get($color,'col-2');
+        }
+        .logo {
+            background-color: red;
+            width: 40px;
+            float: left;
+            border-radius:100%;
+        }
+        .middle{
+            display: inline-block;
+            margin: auto;
+            width: auto;
+        }
+        .right{
+            color: map-get($color,'col-2');
+            float: right;
+        }
+        .def{
+            border-radius:10px;
+            background-color: map-get($color,'col-3');
+        }
+    }
+}
